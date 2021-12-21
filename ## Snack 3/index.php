@@ -42,16 +42,21 @@ $posts = [
     ],
   ];
 
-  // var_dump($posts);
-  var_dump($posts['12-12-2012']);
 
-  
-  for ($i = 0; $i < count($posts); $i++ ) {
-    $post = $posts[$i];
-    
-    // $stampa = $post['title'];
-    echo array_search('12-12-2012', $posts);
+  var_dump(array_keys($posts));
+
+  $arrayChiavi = array_keys($posts);
+
+  for ($i = 0; $i < count($arrayChiavi); $i++ ) {
+    $chiave = $arrayChiavi[$i]; 
+    var_dump($chiave);
+
+    foreach ($posts[$arrayChiavi[$i]] as $post){
+      // var_dump($post);
+      echo  "$chiave <br> $post[title] <br> $post[user] <br> $post[text]" ;
+    };
   };
+
 
 
 ?>
@@ -66,7 +71,6 @@ $posts = [
   <title>Document</title>
 </head>
 <body>
-  <h3> <?php  ?> </h3>
 
 </body>
 </html>
