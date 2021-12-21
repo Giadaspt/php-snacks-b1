@@ -45,7 +45,7 @@
       margin-bottom: 48px;
     }
     .green{
-      width: 100px;
+      width: 300px;
       padding: 10px;
       background-color: green;
     }
